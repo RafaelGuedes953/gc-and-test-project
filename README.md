@@ -6,3 +6,4 @@ Integrantes da Equipe:
     Gabriel Ramos
     Millena Sales
     Rafael Guedes
+    Taynara Silva
