@@ -23,7 +23,7 @@ public class Connect {
             return con;
         } catch (Exception e) {
             System.out.println("Erro!!! " + e.getMessage());
-            JOptionPane.showMessageDialog(null, "Erro encontrado", "Error!!!", 0);
+            JOptionPane.showMessageDialog(null, "Erro encontrado no banco de dados", "Error!!!", 0);
             return null;
         }
     }

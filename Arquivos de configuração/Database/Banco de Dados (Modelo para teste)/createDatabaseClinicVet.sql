@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Dez-2020 às 15:30
+-- Tempo de geração: 10-Nov-2021 às 23:16
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `clinicvet`
 --
+DROP DATABASE IF EXISTS `clinicvet`;
+CREATE DATABASE IF NOT EXISTS `clinicvet` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `clinicvet`;
 
 -- --------------------------------------------------------
 
@@ -41,7 +44,7 @@ CREATE TABLE `animal` (
 -- Extraindo dados da tabela `animal`
 --
 
-INSERT INTO `animal` (`id`, `nome`, `raca`, `descricao`, `peso`, `altura`, `id_cliente`) VALUES
+INSERT INTO `animal` VALUES
 (1, 'Ada Lovelace', 'Felina', 'Fêmea', 2.5, 0.4, 98),
 (2, 'Freddy Krueger', 'Felina', 'Macho', 4.5, 0.6, 100),
 (6, 'Orfeu Silva', 'Labrador', 'Cachorro porte médio', 6, 0.9, 106),
@@ -65,7 +68,7 @@ CREATE TABLE `cliente` (
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nome`, `cpf`, `tel`, `endereco`) VALUES
+INSERT INTO `cliente` VALUES
 (96, 'Hayden Yates', '16210227 9433', '+55 (48) 98624-7105', '4477 Mus. Street'),
 (97, 'Caesar Bennett', '16800605 7510', '+55 (45) 92178-2445', '648-2396 Risus Road'),
 (98, 'Wendy Bryant', '16720712 0101', '+55 (33) 93024-5932', 'P.O. Box 108, 9722 Nibh St.'),
@@ -119,7 +122,7 @@ CREATE TABLE `consulta` (
 -- Extraindo dados da tabela `consulta`
 --
 
-INSERT INTO `consulta` (`id`, `sintomas`, `data`, `turno`, `diagnostico`, `id_animal`, `id_animal_cliente`, `id_veterinario`, `id_secretaria`) VALUES
+INSERT INTO `consulta` VALUES
 (7, 'Problema para comer', '2020-12-12', 'Vespertino', NULL, 1, 98, 1, 1);
 
 -- --------------------------------------------------------
@@ -152,7 +155,7 @@ CREATE TABLE `funcionario` (
 -- Extraindo dados da tabela `funcionario`
 --
 
-INSERT INTO `funcionario` (`id`, `nome`, `endereco`, `cpf`) VALUES
+INSERT INTO `funcionario` VALUES
 (1, 'Carl Acosta', 'P.O. Box 355, 7341 Pede. Avenue', '16910121 1986'),
 (2, 'Burke Irwin', '438-7813 Et Rd.', '16340905 6482'),
 (3, 'Dean Buchanan', '758-1370 Vulputate St.', '16041209 0672'),
@@ -199,7 +202,7 @@ CREATE TABLE `secretaria` (
 -- Extraindo dados da tabela `secretaria`
 --
 
-INSERT INTO `secretaria` (`id`, `id_funcionario`) VALUES
+INSERT INTO `secretaria` VALUES
 (1, 4),
 (5, 7),
 (6, 10),
@@ -221,7 +224,7 @@ CREATE TABLE `veterinario` (
 -- Extraindo dados da tabela `veterinario`
 --
 
-INSERT INTO `veterinario` (`id`, `crmv`, `id_funcionario`) VALUES
+INSERT INTO `veterinario` VALUES
 (1, '17632', 15),
 (2, '12783', 13),
 (3, '98233', 18),
