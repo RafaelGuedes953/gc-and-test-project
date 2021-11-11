@@ -47,7 +47,7 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 
 
 ### 4. **Diagrama de Classes**
-![Diagrama](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/Diagrama de Classes(V1).png?raw=true)
+![Diagrama](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/DiagramadeClasses(V1).png?raw=true)
 
 
 ### 5. **Modelo do Banco de Dados**
