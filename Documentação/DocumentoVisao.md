@@ -20,7 +20,7 @@ Repositório destinado as disciplinas **Gerência de Configuração** e **Teste,
 | ------------------- | ------------------- | ------------------- | ------------------- |
 |  1.0 |  04/10/2021 | @AnaCristina1972, @Millenas, @gabriellramos, @RafaelGuedes953 e @taynara-yt |  Desenvolvimento de introdução, objetivo e requisitos do projeto. |
 |  1.1 |  10/10/2021 | @AnaCristina1972, @Millenas, @gabriellramos, @RafaelGuedes953 e @taynara-yt |  Adição de diagrama de casos de uso, diagrama de classes, modelo conceitual e lógico do banco de dados.|
-| 1.2  |  00/00/2021 | |  |
+| 1.2  |  dia/mês/ano | - |  - |
 
 
 
