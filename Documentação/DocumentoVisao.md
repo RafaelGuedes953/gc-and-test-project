@@ -52,10 +52,10 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 
 ### 5. **Modelo do Banco de Dados**
 **5.1 Modelo Conceitual**
-![Modelo-Conceitual](/Documentação/Diagramas/ModeloConceitualBD (V3).png)
+![Modelo-Conceitual](/Diagramas/PNG/ModeloConceitualBD (V4).png)
 
 **5.2. Modelo Lógico**
-![Modelo-Lógico](/Modelo do Banco de Dados/imagens/ModeloLogicoBD (V3).png)
+![Modelo-Lógico](/Diagramas/PNG/ModeloLogicoBD (V3).png)
 
 
 
