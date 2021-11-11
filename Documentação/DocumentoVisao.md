@@ -47,15 +47,15 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 
 
 ### 4. **Diagrama de Classes**
-![Diagrama](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/Diagrama de Classes(V1).png)
+![Diagrama](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/Diagrama de Classes(V1).png?raw=true)
 
 
 ### 5. **Modelo do Banco de Dados**
 **5.1 Modelo Conceitual**
-![Modelo-Conceitual](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloConceitualBD (V4).png?raw=true)
+![Modelo-Conceitual](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloConceitualBD(V4).png?raw=true)
 
 **5.2. Modelo Lógico**
-![Modelo-Lógico](/Diagramas/PNG/ModeloLogicoBD (V3).png?raw=true)
+![Modelo-Lógico](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloLogicoBD (V3).png?raw=true)
 
 
 
