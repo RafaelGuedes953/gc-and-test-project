@@ -52,7 +52,7 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 
 ### 5. **Modelo do Banco de Dados**
 **5.1 Modelo Conceitual**
-![Modelo-Conceitual](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloConceitualBD(V4).png)
+![Modelo-Conceitual](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloConceitualBD(V4).png?raw=true)
 
 **5.2. Modelo Lógico**
 ![Modelo-Lógico](/Diagramas/PNG/ModeloLogicoBD (V3).png?raw=true)
