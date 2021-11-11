@@ -55,7 +55,7 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 ![Modelo-Conceitual](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloConceitualBD(V4).png?raw=true)
 
 **5.2. Modelo Lógico**
-![Modelo-Lógico](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloLogicoBD (V3).png?raw=true)
+![Modelo-Lógico](https://github.com/RafaelGuedes953/gc-and-test-project/blob/document/Diagramas/PNG/ModeloLogicoBD(V3).png?raw=true)
 
 
 
