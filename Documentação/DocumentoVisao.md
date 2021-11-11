@@ -43,7 +43,7 @@ O sistema ClinicVet realizará o controle de consultas de clientes e seus animai
 Arquitetos de software, engenheiros de software, testadores e usuários classificados como usuários fornecedores.
 
 ### 3. **Logo**
-![Logo](https://github.com/RafaelGuedes953/gc-and-test-project/blob/develop//imagens/imgIconeVerde.png?raw=true)
+![Logo](https://github.com/RafaelGuedes953/gc-and-test-project/blob/develop/imagens/imgIconeVerde.png?raw=true)
 
 
 ### 4. **Diagrama de Classes**
