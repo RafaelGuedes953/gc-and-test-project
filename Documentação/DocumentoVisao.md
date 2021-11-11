@@ -11,15 +11,15 @@ Repositório destinado as disciplinas **Gerência de Configuração** e **Teste,
 
 - Ana Cristina, 21753639;
 - Gabriel Ramos, 21752156;
-- Millena Sales, ?;
+- Millena Sales, 21752127;
 - Rafael Guedes, 21752154;
 - Taynara Silva, 21751227;
 
 ## Histórico de Versões
 | Versão  |  Data  | Autor  |  Descrição  |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-|  1.0 |  04/10/2021 | ?,?,?, @RafaelGuedes953 e @taynara-yt |  Desenvolvimento de introdução, objetivo e requisitos do projeto. |
-|  1.1 |  10/10/2021 | ?,?,?, @RafaelGuedes953 e @taynara-yt |  Adição de diagrama de casos de uso, diagrama de classes, modelo conceitual e lógico do banco de dados.|
+|  1.0 |  04/10/2021 | @AnaCristina1972, @Millenas, @gabriellramos, @RafaelGuedes953 e @taynara-yt |  Desenvolvimento de introdução, objetivo e requisitos do projeto. |
+|  1.1 |  10/10/2021 | @AnaCristina1972, @Millenas, @gabriellramos, @RafaelGuedes953 e @taynara-yt |  Adição de diagrama de casos de uso, diagrama de classes, modelo conceitual e lógico do banco de dados.|
 | 1.2  |  00/00/2021 | |  |
 
 
