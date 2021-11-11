@@ -43,14 +43,14 @@ O sistema ClinicVet realizará o controle de consultas de clientes e seus animai
 Arquitetos de software, engenheiros de software, testadores e usuários classificados como usuários fornecedores.
 
 ### 3. **Logo**
-![Logo](/Arquivos de configuração/imagens/imgIconeVerde.png))
+![Logo](/Documentação/Diagramas/imgIconeVerde.png))
 
 ### 4. **Diagrama de Classes**
 ![Diagrama](/Diagramas/Imagens/Diagrama de Classes (V1).png)
 
 ### 5. **Modelo do Banco de Dados**
 **5.1 Modelo Conceitual**
-![Modelo-Conceitual](/Modelo do Banco de Dados/imagens/ModeloConceitualBD (V4).png)
+![Modelo-Conceitual](/Documentação/Diagramas/ModeloConceitualBD (V3).png)
 
 **5.2. Modelo Lógico**
 ![Modelo-Lógico](/Modelo do Banco de Dados/imagens/ModeloLogicoBD (V3).png)
