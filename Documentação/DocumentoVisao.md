@@ -56,6 +56,7 @@ Arquitetos de software, engenheiros de software, testadores e usuários classifi
 
 
 **5.2. Modelo Lógico**
+
 ![Modelo-Lógico](BancoDeDados-Modelo/imagens/ModeloLogicoBD-V3.png)
 
 
