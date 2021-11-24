@@ -12,10 +12,10 @@ import javax.swing.ImageIcon;
 import modelo.Animal;
 import modelo.Cliente;
 
-public class CadastroAnimal extends javax.swing.JFrame {
+public class AtualizarAnimal extends javax.swing.JFrame {
     Connection con = null;
     
-    public CadastroAnimal() {
+    public AtualizarAnimal() {
         initComponents();
         con = Connect.conectar();
     }
@@ -39,10 +39,10 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         numAlt = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        listaCliente = new javax.swing.JComboBox();
         btnCadastro = new javax.swing.JButton();
         imgLogo = new javax.swing.JLabel();
+        listaAnimais = new javax.swing.JComboBox();
+        jLabel7 = new javax.swing.JLabel();
         JMenuV = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItemCadAnimal = new javax.swing.JMenuItem();
@@ -56,7 +56,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jMenuItemSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Animal");
+        setTitle("Manter cadastro de animal");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setName("cadastroAnimal"); // NOI18N
         setResizable(false);
@@ -97,22 +97,8 @@ public class CadastroAnimal extends javax.swing.JFrame {
 
         numAlt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel6.setText("Cliente");
-
-        listaCliente.setToolTipText("Selecionar dono (Cliente já cadastrado)");
-        listaCliente.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                listaClienteAncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-
         btnCadastro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnCadastro.setText("Cadastrar");
+        btnCadastro.setText("Atualizar cadastro");
         btnCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastroActionPerformed(evt);
@@ -120,6 +106,24 @@ public class CadastroAnimal extends javax.swing.JFrame {
         });
 
         imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgIconeVerdeMenor.png"))); // NOI18N
+
+        listaAnimais.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                listaAnimaisAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        listaAnimais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listaAnimaisActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setText("Animal");
 
         jMenu3.setText("Animal");
 
@@ -187,52 +191,56 @@ public class CadastroAnimal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(389, 389, 389)
-                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(241, 241, 241)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 189, Short.MAX_VALUE)
-                        .addComponent(btnCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(350, 350, 350))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDesc)
-                            .addComponent(txtRaca)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(numPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                    .addComponent(numAlt, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(numPeso, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(numAlt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtDesc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE)
+                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(241, 241, 241))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtRaca)
                         .addGap(241, 241, 241))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(listaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1)
-                            .addComponent(jLabel6))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(listaAnimais, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(375, 375, 375))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(413, 413, 413)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(listaAnimais, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtRaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -244,13 +252,9 @@ public class CadastroAnimal extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(numAlt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(listaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
                 .addComponent(btnCadastro)
-                .addGap(59, 59, 59))
+                .addGap(130, 130, 130))
         );
 
         pack();
@@ -261,7 +265,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
         // botão cadastrar animal
         
         Animal novo = new Animal();
-        Cliente novoCli = new Cliente();
+        Animal antigo = new Animal();
         
         novo.setNome(txtNome.getText());
         novo.setDescricao(txtDesc.getText());
@@ -269,15 +273,14 @@ public class CadastroAnimal extends javax.swing.JFrame {
         novo.setPeso(Double.parseDouble(numPeso.getText()));
         novo.setAltura(Double.parseDouble(numAlt.getText()));
         
-        //pegar valor da comboBox
-        novoCli = (Cliente) listaCliente.getSelectedItem();
-        novo.setDono(novoCli);
+        //pegar valor da comboBox do animal a ser alterado
+        antigo = (Animal) listaAnimais.getSelectedItem();
         
         AnimalDao d = new AnimalDao();
         
-        d.cadastrar(novo);
+        d.atualizar(novo,antigo.getId());
         
-        CadastroAnimal nI = new CadastroAnimal();
+        AtualizarAnimal nI = new AtualizarAnimal();
         nI.setVisible(true);
         this.dispose();
         
@@ -290,20 +293,6 @@ public class CadastroAnimal extends javax.swing.JFrame {
     private void txtDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescActionPerformed
-
-    private void listaClienteAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_listaClienteAncestorAdded
-        listaCliente.removeAllItems(); //remove os itens do comboBox
-        
-        //dados do comboBox
-        ClienteDao cli = new ClienteDao();
-        
-        List<Cliente> lista = cli.listarClientes();
-        
-        for(Cliente c : lista){
-            listaCliente.addItem(c);
-        }
-        
-    }//GEN-LAST:event_listaClienteAncestorAdded
 
     private void jMenuItemMarcConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMarcConsultaActionPerformed
         MarcarConsulta tela = new MarcarConsulta();
@@ -324,6 +313,23 @@ public class CadastroAnimal extends javax.swing.JFrame {
     private void jMenuItemCadAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadAnimalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemCadAnimalActionPerformed
+
+    private void listaAnimaisAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_listaAnimaisAncestorAdded
+        listaAnimais.removeAllItems(); //remove os itens do comboBox
+
+        //dados do comboBox
+        AnimalDao ani = new AnimalDao();
+
+        List<Animal> lista = ani.listarAnimais();
+
+        for(Animal a : lista){
+            listaAnimais.addItem(a);
+        }
+    }//GEN-LAST:event_listaAnimaisAncestorAdded
+
+    private void listaAnimaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaAnimaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listaAnimaisActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
@@ -377,7 +383,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -387,7 +393,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemExeConsulta;
     private javax.swing.JMenuItem jMenuItemMarcConsulta;
     private javax.swing.JMenuItem jMenuItemSair;
-    private javax.swing.JComboBox listaCliente;
+    private javax.swing.JComboBox listaAnimais;
     private javax.swing.JMenu marcarConsulta;
     private javax.swing.JTextField numAlt;
     private javax.swing.JTextField numPeso;

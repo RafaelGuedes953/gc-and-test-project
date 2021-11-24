@@ -34,10 +34,12 @@ public class ConsultaVet extends javax.swing.JFrame {
         JMenuV = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItemCadAnimal = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         marcarConsulta = new javax.swing.JMenu();
         jMenuItemMarcConsulta = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemExeConsulta = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
@@ -123,6 +125,14 @@ public class ConsultaVet extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItemCadAnimal);
 
+        jMenuItem1.setText("Atualizar cadastro de animal");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
         JMenuV.add(jMenu3);
 
         marcarConsulta.setText("Consultas");
@@ -148,6 +158,9 @@ public class ConsultaVet extends javax.swing.JFrame {
         jMenu2.add(jMenuItemExeConsulta);
 
         JMenuV.add(jMenu2);
+
+        jMenu4.setText("Adm");
+        JMenuV.add(jMenu4);
 
         jMenu1.setText("Help");
 
@@ -217,8 +230,6 @@ public class ConsultaVet extends javax.swing.JFrame {
                 .addComponent(btnVoltar)
                 .addContainerGap(77, Short.MAX_VALUE))
         );
-
-        txtDiagnostico.getAccessibleContext().setAccessibleDescription("Insira o diagóstico do animal");
 
         pack();
         setLocationRelativeTo(null);
@@ -305,6 +316,13 @@ public class ConsultaVet extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_listaConsultaAncestorAdded
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        AtualizarAnimal tela = new AtualizarAnimal();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -352,6 +370,8 @@ public class ConsultaVet extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemCadAnimal;
     private javax.swing.JMenuItem jMenuItemExeConsulta;
     private javax.swing.JMenuItem jMenuItemMarcConsulta;

@@ -37,6 +37,30 @@ public class AnimalDao {
             JOptionPane.showMessageDialog(null, "Pet não cadastrado!!!\n" + e.getMessage(), "Erro!!!", 0);
         }
     }
+    
+    public void atualizar(Animal novo, int id) {
+        try {
+            String sql = "insert into animal (nome,descricao,raca,peso,altura,id_cliente) values (?,?,?,?,?,?)";
+            sql = "update animal set nome=?,descricao=?,raca=?,peso=?,altura=? where id=?";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, novo.getNome());
+            ps.setString(2, novo.getDescricao());
+            ps.setString(3, novo.getRaca());
+            ps.setDouble(4, novo.getPeso());
+            ps.setDouble(5, novo.getAltura());
+            ps.setInt(6, id);
+
+            ps.execute();
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!!!", "Confirmação de atualização!", 1);
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Pet não cadastrado!!!\n" + e.getMessage(), "Erro!!!", 0);
+        }
+    }
 
     public List<Animal> listarAnimais() {
         try {
