@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.Funcionario;
-import modelo.Secretaria;
+import modelo.Atendente;
 
 public class SecretariaDao {
 
@@ -19,9 +19,9 @@ public class SecretariaDao {
         this.con = Connect.conectar();
     }
 
-    public List<Secretaria> listarSecretarias() {
+    public List<Atendente> listarSecretarias() {
         try {
-            List<Secretaria> lista = new ArrayList<>();
+            List<Atendente> lista = new ArrayList<>();
 
             //sql de seleção
             String sql = "select * from secretaria";
@@ -31,7 +31,7 @@ public class SecretariaDao {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Secretaria atual = new Secretaria();
+                Atendente atual = new Atendente();
                 FuncionarioDao fun = new FuncionarioDao();
                 Funcionario f = new Funcionario();
 
@@ -59,7 +59,7 @@ public class SecretariaDao {
         }
     }
 
-    public Secretaria getSecretaria(int idSec) { //para enviar id para a consulta
+    public Atendente getSecretaria(int idSec) { //para enviar id para a consulta
         try {
             //sql de seleção do animal com id=parâmetro
             String sql = "select * from secretaria where id=" + idSec;
@@ -69,7 +69,7 @@ public class SecretariaDao {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                Secretaria atual = new Secretaria();
+                Atendente atual = new Atendente();
                 FuncionarioDao fun = new FuncionarioDao();
                 Funcionario f = new Funcionario();
                 f = fun.getDados(rs.getInt("id_funcionario"));

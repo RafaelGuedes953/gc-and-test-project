@@ -3,19 +3,19 @@ package modelo;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Secretaria extends Funcionario {
+public class Atendente extends Funcionario {
 
     Scanner scan = new Scanner(System.in);
     ArrayList<Animal> a = new ArrayList<>(); //stay here
-    ArrayList<Secretaria> s = new ArrayList<>(); //no sense
+    ArrayList<Atendente> s = new ArrayList<>(); //no sense
     //ArrayList<Consulta> cons = new ArrayList<>();
     private int idSec;
 
-    public Secretaria(String nome, String cpf, int id) {
+    public Atendente(String nome, String cpf, int id) {
         super(nome, cpf, id);
     }
 
-    public Secretaria() {}
+    public Atendente() {}
 
     public int getIdSec() {
         return idSec;

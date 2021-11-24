@@ -11,9 +11,9 @@ public class Consulta {
     private String turno;
     private Veterinario v;
     private Animal a;
-    private Secretaria s;
+    private Atendente s;
 
-    public Consulta(Animal ani, Secretaria sec, Veterinario vet) {
+    public Consulta(Animal ani, Atendente sec, Veterinario vet) {
         v = vet;
         a = ani;
         s = sec;
@@ -66,11 +66,11 @@ public class Consulta {
         this.a = a;
     }
 
-    public Secretaria getSec() {
+    public Atendente getSec() {
         return s;
     }
 
-    public void setSec(Secretaria s) {
+    public void setSec(Atendente s) {
         this.s = s;
     }
 

@@ -13,7 +13,7 @@ import java.util.List;
 import modelo.Animal;
 import modelo.Cliente;
 import modelo.Consulta;
-import modelo.Secretaria;
+import modelo.Atendente;
 import modelo.Veterinario;
 
 /**
@@ -334,7 +334,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
         //pegar valores da comboBox
         ani = (Animal) listaAnimais.getSelectedItem();
         novo.setAnimal(ani);
-        novo.setSec((Secretaria) listaSec.getSelectedItem());
+        novo.setSec((Atendente) listaSec.getSelectedItem());
         novo.setVeterinario((Veterinario) listaVet.getSelectedItem());
         //novo.setCliente(ani.getDono());
         //System.out.println("debug: id do Dono: "+novo.getAnimal().getDono().getId());
@@ -376,9 +376,9 @@ public class MarcarConsulta extends javax.swing.JFrame {
         //dados do comboBox
         SecretariaDao sec = new SecretariaDao();
         
-        List<Secretaria> lista = sec.listarSecretarias();
+        List<Atendente> lista = sec.listarSecretarias();
         
-        for(Secretaria s : lista){
+        for(Atendente s : lista){
             listaSec.addItem(s);
         }
     }//GEN-LAST:event_listaSecAncestorAdded
