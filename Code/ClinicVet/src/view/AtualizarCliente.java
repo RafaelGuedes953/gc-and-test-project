@@ -12,10 +12,10 @@ import javax.swing.ImageIcon;
 import modelo.Animal;
 import modelo.Cliente;
 
-public class CadastroAnimal extends javax.swing.JFrame {
+public class AtualizarCliente extends javax.swing.JFrame {
     Connection con = null;
     
-    public CadastroAnimal() {
+    public AtualizarCliente() {
         initComponents();
         con = Connect.conectar();
     }
@@ -29,20 +29,18 @@ public class CadastroAnimal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imgLogo = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        listaCliente = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
-        txtRaca = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtDesc = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        numPeso = new javax.swing.JTextField();
+        txtCPF = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtEndereco = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        numAlt = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        listaCliente = new javax.swing.JComboBox();
-        btnCadastro = new javax.swing.JButton();
-        imgLogo = new javax.swing.JLabel();
+        numTel = new javax.swing.JTextField();
+        btnCadastro1 = new javax.swing.JButton();
         JMenuV = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItemCadAnimal = new javax.swing.JMenuItem();
@@ -51,56 +49,22 @@ public class CadastroAnimal extends javax.swing.JFrame {
         jMenuItemMarcConsulta = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemExeConsulta = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Animal");
+        setTitle("Manter cadastro de cliente");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setName("cadastroAnimal"); // NOI18N
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Nome");
+        imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgIconeVerdeMenor.png"))); // NOI18N
 
-        txtNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtNome.setToolTipText("Nome do animal");
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
-            }
-        });
-
-        txtRaca.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Raça");
-
-        txtDesc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtDesc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDescActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setText("Descrição");
-
-        numPeso.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel4.setText("Peso");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel5.setText("Altura");
-
-        numAlt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel6.setText("Cliente");
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setText("Selecione o cliente");
 
         listaCliente.setToolTipText("Selecionar dono (Cliente já cadastrado)");
         listaCliente.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -112,16 +76,53 @@ public class CadastroAnimal extends javax.swing.JFrame {
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-
-        btnCadastro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnCadastro.setText("Cadastrar");
-        btnCadastro.addActionListener(new java.awt.event.ActionListener() {
+        listaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastroActionPerformed(evt);
+                listaClienteActionPerformed(evt);
             }
         });
 
-        imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgIconeVerdeMenor.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Nome");
+
+        txtNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtNome.setToolTipText("Inserir o nome do cliente");
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("CPF");
+
+        txtCPF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCPF.setToolTipText("Insira um cpf válido, sem pontos ou traços");
+        txtCPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCPFActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("Endereço");
+
+        txtEndereco.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtEndereco.setToolTipText("Insira o endereço do cliente");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("Telefone");
+
+        numTel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numTel.setToolTipText("Insira um telefone para contato");
+
+        btnCadastro1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnCadastro1.setText("Atualizar cadastro");
+        btnCadastro1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastro1ActionPerformed(evt);
+            }
+        });
 
         jMenu3.setText("Animal");
 
@@ -167,7 +168,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
 
         JMenuV.add(jMenu2);
 
-        jMenu5.setText("Adm");
+        jMenu4.setText("Adm");
 
         jMenuItem2.setText("Cadastrar cliente");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -175,17 +176,17 @@ public class CadastroAnimal extends javax.swing.JFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem2);
+        jMenu4.add(jMenuItem2);
 
-        jMenuItem3.setText("Atualizar cliente");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem4.setText("Atualizar cliente");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem3);
+        jMenu4.add(jMenuItem4);
 
-        JMenuV.add(jMenu5);
+        JMenuV.add(jMenu4);
 
         jMenu1.setText("Help");
 
@@ -206,123 +207,65 @@ public class CadastroAnimal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(389, 389, 389)
+                .addGap(413, 413, 413)
                 .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(241, 241, 241)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 189, Short.MAX_VALUE)
-                        .addComponent(btnCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(350, 350, 350))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDesc)
-                            .addComponent(txtRaca)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(numPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                    .addComponent(numAlt, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(241, 241, 241))
+                        .addComponent(jLabel1)
+                        .addContainerGap(777, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(listaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel6))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtEndereco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numTel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCPF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(listaCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(405, Short.MAX_VALUE)
+                .addComponent(btnCadastro1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(375, 375, 375))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(listaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtRaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGap(6, 6, 6)
-                .addComponent(numPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(numAlt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(listaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(btnCadastro)
-                .addGap(59, 59, 59))
+                .addComponent(numTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(btnCadastro1)
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroActionPerformed
-        // botão cadastrar animal
-        
-        Animal novo = new Animal();
-        Cliente novoCli = new Cliente();
-        
-        novo.setNome(txtNome.getText());
-        novo.setDescricao(txtDesc.getText());
-        novo.setRaca(txtRaca.getText());
-        novo.setPeso(Double.parseDouble(numPeso.getText()));
-        novo.setAltura(Double.parseDouble(numAlt.getText()));
-        
-        //pegar valor da comboBox
-        novoCli = (Cliente) listaCliente.getSelectedItem();
-        novo.setDono(novoCli);
-        
-        AnimalDao d = new AnimalDao();
-        
-        d.cadastrar(novo);
-        
-        CadastroAnimal nI = new CadastroAnimal();
-        nI.setVisible(true);
-        this.dispose();
-        
-    }//GEN-LAST:event_btnCadastroActionPerformed
-
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
-
-    private void txtDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDescActionPerformed
-
-    private void listaClienteAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_listaClienteAncestorAdded
-        listaCliente.removeAllItems(); //remove os itens do comboBox
-        
-        //dados do comboBox
-        ClienteDao cli = new ClienteDao();
-        
-        List<Cliente> lista = cli.listarClientes();
-        
-        for(Cliente c : lista){
-            listaCliente.addItem(c);
-        }
-        
-    }//GEN-LAST:event_listaClienteAncestorAdded
 
     private void jMenuItemMarcConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMarcConsultaActionPerformed
         MarcarConsulta tela = new MarcarConsulta();
@@ -346,7 +289,7 @@ public class CadastroAnimal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        AtualizarAnimal tela = new AtualizarAnimal();
+        AtualizarCliente tela = new AtualizarCliente();
         tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -358,12 +301,61 @@ public class CadastroAnimal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void listaClienteAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_listaClienteAncestorAdded
+        listaCliente.removeAllItems(); //remove os itens do comboBox
+
+        //dados do comboBox
+        ClienteDao cli = new ClienteDao();
+
+        List<Cliente> lista = cli.listarClientes();
+
+        for(Cliente c : lista){
+            listaCliente.addItem(c);
+        }
+
+    }//GEN-LAST:event_listaClienteAncestorAdded
+
+    private void listaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listaClienteActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCPFActionPerformed
+
+    private void btnCadastro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastro1ActionPerformed
+        // botão cadastrar animal
+
+        Cliente novo = new Cliente();
+        Cliente antigo = new Cliente();
+
+        novo.setNome(txtNome.getText());
+        novo.setCpf(txtCPF.getText());
+        novo.setEnd(txtEndereco.getText());
+        novo.setTel(numTel.getText());
+        
+        antigo = (Cliente) listaCliente.getSelectedItem();
+
+        ClienteDao d = new ClienteDao();
+
+        d.atualizar(novo, antigo.getId());
+
+        CadastroCliente nI = new CadastroCliente();
+        nI.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_btnCadastro1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         AtualizarCliente tela = new AtualizarCliente();
         tela.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -403,31 +395,29 @@ public class CadastroAnimal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar JMenuV;
-    private javax.swing.JButton btnCadastro;
+    private javax.swing.JButton btnCadastro1;
     private javax.swing.JLabel imgLogo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemCadAnimal;
     private javax.swing.JMenuItem jMenuItemExeConsulta;
     private javax.swing.JMenuItem jMenuItemMarcConsulta;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JComboBox listaCliente;
     private javax.swing.JMenu marcarConsulta;
-    private javax.swing.JTextField numAlt;
-    private javax.swing.JTextField numPeso;
-    private javax.swing.JTextField txtDesc;
+    private javax.swing.JTextField numTel;
+    private javax.swing.JTextField txtCPF;
+    private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtNome;
-    private javax.swing.JTextField txtRaca;
     // End of variables declaration//GEN-END:variables
 }

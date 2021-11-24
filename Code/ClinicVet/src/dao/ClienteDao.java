@@ -35,6 +35,28 @@ public class ClienteDao {
             JOptionPane.showMessageDialog(null, "Oops, cliente não cadastrado!!!\n" + e.getMessage(), "Erro!!!", 0);
         }
     }
+    
+    public void atualizar(Cliente novo, int id) {
+        try {
+            String sql = "update cliente set nome=?,cpf=?,tel=?,endereco=? where id=?";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, novo.getNome());
+            ps.setString(2, novo.getCpf());
+            ps.setString(3, novo.getTel());
+            ps.setString(4, novo.getEnd());
+            ps.setInt(5, id);
+
+            ps.execute();
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!!!", "Confirmação de atualização!", 1);
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Oops, ocorreu algum erro!!!\n" + e.getMessage(), "Erro!!!", 0);
+        }
+    }
 
     public List<Cliente> listarClientes() {
         try {
