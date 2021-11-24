@@ -39,7 +39,9 @@ public class ConsultaVet extends javax.swing.JFrame {
         jMenuItemMarcConsulta = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemExeConsulta = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
@@ -159,8 +161,20 @@ public class ConsultaVet extends javax.swing.JFrame {
 
         JMenuV.add(jMenu2);
 
-        jMenu4.setText("Adm");
-        JMenuV.add(jMenu4);
+        jMenu5.setText("Adm");
+
+        jMenuItem2.setText("Cadastrar cliente");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem2);
+
+        jMenuItem3.setText("Atualizar cliente");
+        jMenu5.add(jMenuItem3);
+
+        JMenuV.add(jMenu5);
 
         jMenu1.setText("Help");
 
@@ -323,6 +337,13 @@ public class ConsultaVet extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        CadastroCliente tela = new CadastroCliente();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -370,8 +391,10 @@ public class ConsultaVet extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemCadAnimal;
     private javax.swing.JMenuItem jMenuItemExeConsulta;
     private javax.swing.JMenuItem jMenuItemMarcConsulta;

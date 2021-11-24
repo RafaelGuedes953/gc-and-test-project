@@ -14,6 +14,27 @@ public class ClienteDao {
     public ClienteDao() {
         this.con = Connect.conectar();
     }
+    
+    public void cadastrar(Cliente novo) {
+        try {
+            String sql = "insert into cliente (nome,cpf,tel,endereco) values (?,?,?,?)";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, novo.getNome());
+            ps.setString(2, novo.getCpf());
+            ps.setString(3, novo.getTel());
+            ps.setString(4, novo.getEnd());
+
+            ps.execute();
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Clente cadastrado com sucesso!!!", "Confirmação de cadastro!", 1);
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Oops, cliente não cadastrado!!!\n" + e.getMessage(), "Erro!!!", 0);
+        }
+    }
 
     public List<Cliente> listarClientes() {
         try {
