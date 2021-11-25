@@ -1,0 +1,1 @@
+Aqui temos um modelo do banco, já com valores adicionados para tabelas cliente, funcionario, veterinario, secretaria, consultas e exames.
